@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import { Payment, columns } from "@/components/payments/columns";
 import { DataTable } from "@/components/payments/data-table";
+import { Button } from "./components/ui/button";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,11 +19,9 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <div className="border rounded p-2">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
+      <Button onClick={() => setCount((count) => count + 1)}>
+        count is {count}
+      </Button>
       <DataTable
         columns={columns}
         data={
